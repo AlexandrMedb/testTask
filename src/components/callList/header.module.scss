@@ -1,0 +1,68 @@
+.wrapper{
+  width: 100%;
+  height: 64px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 5px #E9EDF3;
+  display: flex;
+  justify-content: center;
+
+  .container{
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+    align-items: center;
+
+    .date{
+      flex-grow: 1;
+      font-size: 15px;
+      color: #899CB1;
+    }
+
+    .progressWrapper{
+      flex-grow: 1;
+      display: flex;
+      font-size: 14px;
+
+      .progressContainer{
+        margin-right: 56px;
+        .progressText{
+          padding-bottom: 7px;
+        }
+        .progressBar{
+          width: 156px;
+
+          background: #DEE6F5;
+          border-radius: 12px;
+          height: 6px;
+          overflow: hidden;
+          color: rgba(0, 0, 0, 0);
+          progress{
+            overflow: hidden;
+          }
+        }
+      }
+
+    }
+
+    .search{
+      margin-right: 64px;
+    }
+
+    .account{
+      display: flex;
+      align-items: center;
+      color: #899CB1;
+
+      img{
+        height: 40px;
+      }
+      svg {
+        padding-top: 5px;
+        margin-left: 10px;
+      }
+      &:last-of-type {
+        margin-left: 47px;
+      }
+    }
+  }
+}

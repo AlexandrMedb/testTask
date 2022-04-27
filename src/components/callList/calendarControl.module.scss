@@ -1,0 +1,46 @@
+@import "src/styles/const.module";
+
+
+.calendarButtonContainer{
+  box-sizing: border-box;
+  margin-left: 16px;
+  display: flex;
+  background: #fff;
+  border: 1px solid #EAF0FA;
+  border-radius: 58px;
+  color: $TEXT_DISABLED_COLOR;
+  fill: $TEXT_DISABLED_COLOR;
+  stroke: $TEXT_DISABLED_COLOR;
+  &> div{
+    cursor: pointer;
+    padding: 8px 8px 8px 11px;
+
+    &:hover{
+      background: $ROW_HOVER;
+      color: $HOVER_COLOR;
+      fill: $HOVER_COLOR;
+      stroke: $HOVER_COLOR;
+    }
+  }
+  &>div:first-of-type,
+  &>div:last-of-type{
+
+    border-left: 1px solid #EAF0FA;
+    padding: 8px 16px;
+  }
+
+  &> div:first-of-type{
+    transform: rotate(180deg);
+  }
+  &>div:last-of-type{
+    transform: translateY(0.9px);
+  }
+  .calendarButton{
+    display: flex;
+    align-items: center;
+
+    svg {
+      padding-right: 7px;
+    }
+  }
+}

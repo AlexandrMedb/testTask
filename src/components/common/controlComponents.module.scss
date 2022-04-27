@@ -1,0 +1,101 @@
+@import "../../styles/const.module";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 40px;
+  background: #fff;
+  padding: 0 12px;
+  color: $TEXT_DISABLED_COLOR;
+  transition: all 0.2s ease;
+
+  input {
+    display: none;
+  }
+
+  &:hover{
+    border-color: $ACTIVE_COLOR ;
+    background: $ICON_BLUE_LIGHT;
+    color: $HOVER_COLOR;
+    .checkmark{
+      border-color: $ACTIVE_COLOR;
+    }
+  }
+  .checkmark {
+    height: 16px;
+    width: 16px;
+    box-sizing: border-box;
+    border: 2px solid #ADBFDF;
+    border-radius: 3px;
+    margin-right: 8px;
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+
+
+
+  input:checked ~ .checkmark {
+    background-color: $ACTIVE_COLOR;
+    border: none;
+    transition: background-color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      left: 4.5px;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      background: $HOVER_COLOR;
+    }
+  }
+
+
+  span {
+    //color: $TEXT_DISABLED_COLOR;
+    font-size: 14px;
+    line-height: 28px;
+
+    &:hover{
+      color: $HOVER_COLOR ;
+    }
+  }
+
+  input:checked ~ span{
+    color: $ACTIVE_COLOR;
+    &:hover{
+      color: $HOVER_COLOR ;
+    }
+  }
+}
+
+//h3 {
+//  cursor:pointer;
+//  display: flex;
+//  align-items: center;
+//  color: $TEXT_DISABLED_COLOR;
+//  font-size: 14px;
+//  line-height: 28px;
+//  font-weight: 400;
+//  height: 40px;
+//
+//  &:hover{
+//    color: $HOVER_COLOR;
+//  }
+//}
+//
+//div{
+//  display: flex;
+//  align-items: center;
+//  height: 40px;
+//  color: #71869D;
+//  font-size: 14px;
+//  line-height: 28px;
+//}

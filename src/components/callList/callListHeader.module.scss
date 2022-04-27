@@ -1,0 +1,57 @@
+@import "../../styles/const.module";
+
+
+.wrapper{
+  display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  font-size: 14px;
+  color: $TEXT_DISABLED_COLOR;
+  &:hover{
+    color: $HOVER_COLOR;
+  }
+  div{
+    cursor: pointer;
+  }
+
+  .headerCellSort{
+    margin-right: 4.5px;
+    stroke: $TEXT_DISABLED_COLOR;
+    &:hover{
+      stroke: $HOVER_COLOR;
+    }
+  }
+
+  .headerCellFilter{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 6px;
+    fill: $TEXT_DISABLED_COLOR;
+    svg{
+      width: 8px;
+      //padding-bottom: 1px;
+    }
+
+    &:hover{
+      fill: $HOVER_COLOR;
+    }
+
+  }
+}
+
+.headerCellActive{
+  .headerCellSort{
+    margin-right: 4.5px;
+    cursor: pointer;
+    stroke: $ACTIVE_COLOR;
+    &:hover{
+      stroke: $HOVER_COLOR;
+    }
+  }
+}

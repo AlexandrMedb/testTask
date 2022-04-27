@@ -1,0 +1,26 @@
+@import "../../styles/const.module";
+
+.wrapper{
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  top: 44px;
+  max-width: 210px;
+  background: #FFFFFF;
+  border: 1px solid rgba(216, 228, 251, 0.56);
+  box-sizing: border-box;
+  box-shadow: 0 4px 5px #E9EDF3;
+  border-radius: 4px;
+  flex: none;
+}
+
+.activeBg{
+  position: absolute;
+  height: 100vh;
+  width:100vw;
+  top:0;
+  left: 0;
+}
